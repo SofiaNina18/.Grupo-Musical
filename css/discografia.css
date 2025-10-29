@@ -1,0 +1,75 @@
+/* Reset básico para el slider */
+/* Si ya tienes esto en styleflex.css, puedes omitirlo */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+*/
+
+/* 1. ANULACIÓN DE ESTILOS GENERALES Y DEFINICIÓN DE ANCHO PRINCIPAL */
+.discografia .carrusel { 
+    /* Anula la regla 'display: flex' de tu styleflex.css que lo encogía */
+    display: block; 
+    width: 100%;
+    padding: 30px 0;
+}
+
+/* 2. ENVOLTORIO DEL SLIDER (Centrado y Tamaño) */
+.discografia .imagenes{
+    position: relative;
+    max-width: 1200px; /* Tamaño máximo para escritorio */
+    width: 90%;        /* Tamaño responsivo */
+    margin: 0 auto;    /* Lo centra en la página */
+    min-height: 400px; /* Altura mínima de seguridad */
+    box-shadow: 0 .25rem .5rem #21212126; /* Sombra heredada */
+    border-radius: .5rem; /* Bordes redondeados heredados */
+}
+
+/* 3. EL SLIDER INTERNO */
+.discografia .imagen{
+    display: flex;
+    aspect-ratio: 16 / 9; /* Esto define la altura */
+    overflow-x: scroll; /* Cambiado de 'hidden' a 'scroll' para mejor soporte */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    
+    /* CRÍTICO: Asegura que el slider no se encoja por el flexbox del padre */
+    min-width: 100%; 
+    height: 100%;
+}
+
+.discografia .imagen img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    
+    /* CRÍTICO: Asegura que la imagen ocupe el 100% del espacio asignado */
+    min-width: 100%; 
+    height: 100%;
+}
+
+/* 4. NAVEGACIÓN DEL SLIDER (botones/puntos) */
+.discografia .imagen-nav{
+    display: flex;
+    /* ✅ CORRECCIÓN DE SINTAXIS: 1rem (sin espacio) */
+    column-gap: 1rem; 
+    position: absolute;
+    bottom: 1.25rem; /* Separación debajo del slider */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.discografia .imagen-nav a{
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .75;
+    transition: opacity ease 250ms;
+}
+
+.discografia .imagen-nav a:hover{
+    opacity: 1;
+}
