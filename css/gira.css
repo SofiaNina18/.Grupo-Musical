@@ -1,61 +1,55 @@
+/* Archivo: gira.css — estilos para la sección de giras */
 .apartadoGira {
     background-color:rgb(56, 49, 54);
 }
 .apartadoGira h2{
     text-align: center;
-    padding: 20px 0 10px;
-    border-bottom: 1px solid var(--queen-gold);
-    margin-bottom: 20px;
+    padding: 20px 0 10px; /* espacio arriba y abajo del título */
+    border-bottom: 1px solid var(--queen-gold); /* línea divisoria sutil */
+    margin-bottom: 20px; /* separación respecto al contenido */
     font-size: 50px;
     color: white;
-    text-decoration: underline;
+    text-decoration: underline; /* acento visual adicional */
 }
 
-/* ================================================= */
-/* Diseño de Giras (Formato de "Tabla" Sencilla) */
-/* ================================================= */
 
-/* Contenedor principal: Usamos Flexbox para organizar las "filas" de giras */
 .apartadoGira section {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0 auto; /* centra horizontalmente */
+    padding: 20px; /* espacio interior */
 }
 
-/* Estilo de cada Gira (article) como una "fila" */
+
 .apartadoGira article {
-    background-color: #1A1A1A; 
+    background-color: #1A1A1A;
     border: 1px solid var(--queen-red);
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    /* Usamos Flex para organizar los contenidos internamente */
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si la pantalla es pequeña */
-    justify-content: space-between;
-    color: white;
+    display: flex; /* organiza los hijos en línea */
+    flex-wrap: wrap; /* permite que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: space-between; /* separa elementos a los extremos cuando cabe */
+    color: white; /* color de texto dentro de cada fila */
 }
 
 .apartadoGira article h3 {
     color: var(--queen-gold);
     font-size: 1.2em;
     margin: 0;
-    flex-basis: 100%; /* Ocupa todo el ancho arriba */
+    flex-basis: 100%; /* Ocupa todo el ancho en la línea superior */
     padding-bottom: 5px;
     margin-bottom: 5px;
-    border-bottom: 1px dotted #444;
+    border-bottom: 1px dotted #444; /* separación visual */
 }
 
-/* Estilo para los párrafos (datos de la gira) */
+
 .apartadoGira article p {
     margin: 3px 10px 3px 0;
     font-size: 0.95em;
-    /* Le damos un ancho para que se organicen como columnas */
-    flex-basis: auto; 
+    flex-basis: auto; /* se adapta al contenido y al espacio disponible */
 }
 
-/* Resaltar las fechas */
 .apartadoGira article p:first-of-type {
     font-weight: bold;
-    color: var(--queen-red);
+    color: white;
 }

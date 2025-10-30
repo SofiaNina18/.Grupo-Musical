@@ -1,97 +1,91 @@
-
+/* Archivo: discografia.css — estilos para la página de discografía */
 .discografia  {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(56, 49, 54);
-    color: white;
+    font-family: Arial, Helvetica, sans-serif; /* fuente base para la sección */
+    background-color: rgb(56, 49, 54); /* fondo oscuro coherente con el resto del sitio */
+    color: white; /* color por defecto del texto en esta sección */
 
 }
 .discografia h2 {
-    text-align: center;
-    font-size: 50px;
-    color: white;
-    margin-top: 30px; /* Margen superior */
-    padding-bottom: 30px; /* Espacio debajo del título */
-    text-decoration: underline;
+    text-align: center; /* centra el título horizontalmente */
+    font-size: 50px; /* tamaño grande para destacar la sección */
+    color: white; /* color del título */
+    margin-top: 30px; /* separa desde arriba */
+    padding-bottom: 30px; /* espacio interno inferior */
+    text-decoration: underline; /* subraya para énfasis */
 }
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* ancho máximo para mantener legibilidad */
+    margin: 0 auto; /* centra el contenedor horizontalmente */
 }
 .galeria-audio {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 30px;
-    
+    display: grid; /* grid para organizar las tarjetas en filas/columnas */
+    grid-template-columns: repeat(2, 1fr); /* dos columnas iguales en escritorio */
+    gap: 24px; /* separación entre las tarjetas */
+    margin-top: 30px; /* espacio superior respecto al elemento anterior */
 }
+/* Item: tarjeta que contiene imagen/media, overlay y reproductor */
 .item {
-    position: relative;
-    background: #222;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-    /* quitamos altura fija: dejamos que el contenido marque el tamaño */
-    display: block;
-    
+    position: relative; /* referencia para overlays posicionados de forma absoluta */
+    background: #222; /* fondo oscuro de la tarjeta */
+    border-radius: 10px; /* esquinas redondeadas */
+    overflow: hidden; /* recorta contenidos que sobresalgan */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13); /* sombra para profundidad */
+    display: block; /* comportamiento tipo bloque */
 }
 
 /* contenedor de la imagen y overlay */
 .item .media{
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0; /* que la imagen tenga esquinas redondeadas arriba */
-    
+    position: relative; /* referencia para el overlay absoluto */
+    overflow: hidden; /* evita que la imagen ampliada sobresalga */
+    border-radius: 10px 10px 0 0; /* esquinas redondeadas en la parte superior */
 }
 
 .item .media img {
-    width: 750px;
-    height: 350px; /* no recortamos la imagen */
-    object-fit: cover;
-    display: block;
-    transition: transform 0.35s ease;
-    
+    width: 750px; /* ancho fijo para el diseño actual */
+    height: 350px; /* altura fija para mantener la proporción de la tarjeta */
+    object-fit: cover; /* recorta la imagen para cubrir sin deformar */
+    display: block; /* elimina espacio por display inline */
+    transition: transform 0.35s ease; /* suaviza la animación de escala */
 }
 
 .item:hover .media img,
 .item:focus-within .media img {
-    transform: scale(1.05);
-    
+    transform: scale(1.05); /* pequeño zoom al interactuar con la tarjeta */
 }
 
 .overlay {
-    position: absolute;
-    inset: 0; /* cubrir toda el área de .media */
-    background: rgba(0,0,0,0.65);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.25s, transform 0.25s;
-    padding: 18px;
-    text-align: center;
-    transform: translateY(8px);
+    position: absolute; /* se coloca sobre la imagen */
+    inset: 0; /* cubre todo el contenedor .media */
+    background: rgba(0,0,0,0.65); /* oscurece la imagen para mejorar contraste */
+    color: #fff; /* color del contenido del overlay */
+    display: flex; /* facilita centrar el contenido */
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+    opacity: 0; /* invisible por defecto */
+    transition: opacity 0.25s, transform 0.25s; /* animaciones suaves */
+    padding: 18px; /* espacio interior */
+    text-align: center; /* alinea texto multi-línea */
+    transform: translateY(8px); /* desplazamiento inicial para animación */
 }
 
 .item:hover .overlay,
 .item:focus-within .overlay {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* muestra el overlay al pasar el cursor o al enfocar */
+    transform: translateY(0); /* vuelve a su posición visible */
 }
 .item audio {
-    width: 100%;
-    margin: 0;
-    background: #fff;
-    border-radius: 0 0 10px 10px;
-    outline: none;
+    width: 100%; /* el reproductor ocupa todo el ancho */
+    margin: 0; /* sin margen externo */
+    background: #fff; /* fondo claro para el control nativo */
+    border-radius: 0 0 10px 10px; /* redondea sólo la parte inferior */
+    outline: none; /* elimina outline por defecto */
 }
 @media (max-width: 900px) {
     .galeria-audio {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* una columna en pantallas pequeñas */
     }
     .item .media img {
-        /* imágenes más pequeñas en móvil si es necesario */
-        max-height: 260px;
-        object-fit: cover;
+        max-height: 260px; /* limitar altura en móvil para mejor ajuste */
+        object-fit: cover; /* mantener recorte consistente */
     }
 }

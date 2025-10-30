@@ -1,3 +1,4 @@
+/* Archivo: gira-completa.css — estilos para la página de la gira completa */
 .gira-completa {
     /* Fondo que evoca el escenario/oscuridad, pero más suave que el negro puro */
     background-color: rgb(56, 49, 54);; 
@@ -8,16 +9,11 @@
 .gira-completa h2 {
     text-align: center;
     padding: 20px 0 10px;
-    border-bottom: 1px solid var(--queen-gold);
     margin-bottom: 20px;
     font-size: 50px;
     color: white;
     text-decoration: underline;
 }
-
-/* ================================================= */
-/* Estilos de la Imagen (Póster de Gira) */
-/* ================================================= */
 
 .gira-completa img.gira-completa {
     /* La clase .gira-completa en la imagen la hace única */
@@ -29,7 +25,7 @@
     height: auto;
     
     /* Estilos visuales de borde y sombra (como un póster enmarcado) */
-    border: 5px solid var(--queen-gold); 
+    border: 5px solid white; 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8); /* Sombra intensa para efecto 3D */
     
     /* Transición para efectos visuales */

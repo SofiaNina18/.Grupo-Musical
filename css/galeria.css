@@ -1,6 +1,22 @@
 
+/*
+    Variables de tema (semántica)
+
+    --queen-gold: color dorado/acento del tema. Se usa para bordes y títulos
+                                 (ej. líneas divisorias y acentos en encabezados).
+
+    --queen-red:  color rojo/acento secundario. Se usa para enfatizar fechas,
+                                 bordes de aviso o detalles llamativos (ej. fechas en las giras).
+
+    --gap:        variable de espaciado reutilizable (se usa en grids para gap
+                                 entre elementos). No modificar aquí; solo estamos documentando.
+
+    Nota: estas variables se definen (o deberían definirse) en un archivo global
+    mediante :root { --queen-gold: #...; --queen-red: #...; --gap: ...; }
+    Aquí sólo añadimos la descripción semántica sin cambiar valores.
+*/
+
 .galeria {
-    /* Mantenemos el color de fondo */
     background-color: rgb(56, 49, 54); 
 }
 
