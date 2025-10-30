@@ -85,14 +85,16 @@ nav
     background-color: rgb(0, 0, 0); /* Fondo al pasar el ratón */
 }
 
-.giras
+.giras, .tienda
 {
     position: relative; /* Contenedor relativo para posicionar el submenú absoluto */
 }
-.giras:hover > .MenuNivel2
+.giras:hover, .tienda:hover > .MenuNivel2
 {
     display: block; /* Muestra el submenú cuando se hace hover sobre el item */
 }
+
+
 
 .MenuNivel2
 {
