@@ -1,0 +1,144 @@
+
+.galeria {
+    /* Mantenemos el color de fondo */
+    background-color: rgb(56, 49, 54); 
+}
+
+.galeria h2 {
+    text-align: center;
+    padding: 20px 0 10px;
+    border-bottom: 1px solid var(--queen-gold);
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: white;
+    text-decoration: underline;
+}
+
+.galeria .contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid; 
+    /* Base de 4 columnas para el control granular */
+    grid-template-columns: repeat(4, 1fr); 
+    /* Altura de fila base media */
+    grid-auto-rows: 200px; 
+    /* Espacio reducido para el look de collage denso */
+    grid-gap: 20px;  /* Espacio entre imágenes */
+    padding: 20px 0;
+}
+
+.galeria .imagen-galeria img {
+    width: 100%;
+    height: 100%;
+    /* Mantenemos 'cover' para que no haya espacios vacíos, pero minimizamos el recorte con el nuevo patrón de span */
+    object-fit: cover; 
+}
+
+/* --- PATRÓN DE ALTERNANCIA ESTRICTA PARA LAS 14 IMÁGENES --- */
+
+/* BLOQUE 1: Largo-Corto (Izquierda Larga, Derecha Cuadrada) */
+
+/* Imagen 1: Larga a la Izquierda (Ocupa 3 columnas) */
+.galeria .imagen-galeria:nth-child(1) { 
+    grid-column: span 3; 
+    grid-row: span 2; 
+}
+/* Imagen 2: Cuadrada a la Derecha (Ocupa 1 columna) */
+.galeria .imagen-galeria:nth-child(2) { 
+    grid-column: span 1; 
+    grid-row: span 2; 
+}
+
+/* BLOQUE 2: Corto-Largo (Izquierda Cuadrada, Derecha Larga) */
+
+/* Imagen 3: Cuadrada a la Izquierda (Ocupa 1 columna, pero se hace más alta para balance) */
+.galeria .imagen-galeria:nth-child(3) { 
+    grid-column: span 1; 
+    grid-row: span 3; 
+}
+/* Imagen 4: Larga a la Derecha (Ocupa 3 columnas) */
+.galeria .imagen-galeria:nth-child(4) { 
+    grid-column: span 3; 
+    grid-row: span 3; 
+}
+
+/* Repetimos el patrón (Bloque 1) */
+
+/* Imagen 5: Larga a la Izquierda */
+.galeria .imagen-galeria:nth-child(5) { 
+    grid-column: span 3; 
+    grid-row: span 2; 
+}
+/* Imagen 6: Cuadrada a la Derecha */
+.galeria .imagen-galeria:nth-child(6) { 
+    grid-column: span 1; 
+    grid-row: span 2; 
+}
+
+/* Repetimos el patrón (Bloque 2) */
+
+/* Imagen 7: Cuadrada a la Izquierda */
+.galeria .imagen-galeria:nth-child(7) { 
+    grid-column: span 1; 
+    grid-row: span 3; 
+}
+/* Imagen 8: Larga a la Derecha */
+.galeria .imagen-galeria:nth-child(8) { 
+    grid-column: span 3; 
+    grid-row: span 3; 
+}
+
+/* Repetimos el patrón (Bloque 1) */
+
+/* Imagen 9: Larga a la Izquierda */
+.galeria .imagen-galeria:nth-child(9) { 
+    grid-column: span 3; 
+    grid-row: span 2; 
+}
+/* Imagen 10: Cuadrada a la Derecha */
+.galeria .imagen-galeria:nth-child(10) { 
+    grid-column: span 1; 
+    grid-row: span 2; 
+}
+
+/* Repetimos el patrón (Bloque 2) */
+
+/* Imagen 11: Cuadrada a la Izquierda */
+.galeria .imagen-galeria:nth-child(11) { 
+    grid-column: span 1; 
+    grid-row: span 3; 
+}
+/* Imagen 12: Larga a la Derecha */
+.galeria .imagen-galeria:nth-child(12) { 
+    grid-column: span 3; 
+    grid-row: span 3; 
+}
+
+/* Patrón final (Bloque 1) */
+
+/* Imagen 13: Larga a la Izquierda */
+.galeria .imagen-galeria:nth-child(13) { 
+    grid-column: span 3; 
+    grid-row: span 2; 
+}
+/* Imagen 14: Cuadrada a la Derecha */
+.galeria .imagen-galeria:nth-child(14) { 
+    grid-column: span 1; 
+    grid-row: span 2; 
+}
+
+/* --- Media Query (Ajuste para móviles) --- */
+
+@media (max-width: 1200px) {
+    .galeria .contenido {
+        padding: 20px;
+        grid-template-columns: 1fr; 
+        grid-auto-rows: auto; 
+    }
+    
+    /* Anulamos todos los 'span' para móvil */
+    .galeria .imagen-galeria {
+        grid-column: auto !important; 
+        grid-row: auto !important;
+    }
+}

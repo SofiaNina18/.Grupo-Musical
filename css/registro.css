@@ -1,0 +1,228 @@
+/* Estilos para la página de registro */
+.registro {
+    background-color: rgb(56, 49, 54);
+    color: white;
+    min-height: 100vh;
+}
+
+.registro h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 30px 0;
+    color: white;
+    text-decoration: underline;
+}
+
+.contenedor-registro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contenedor-registro h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 30px 0;
+    color: white;
+    text-decoration: underline;
+}
+
+.formulario-registro {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grupo-campos {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .grupo-campos {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.campo {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="date"],
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background: rgba(156, 7, 7, 0.05);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-color: white;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #6bd26e;
+    background: rgba(169, 5, 5, 0.1);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para los radio buttons */
+.opciones-radio {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.opciones-radio label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.opciones-radio input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Estilos para los checkboxes */
+.opciones-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opciones-checkbox label {
+    margin-bottom: 0;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.opciones-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Estilos para el textarea */
+.campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Estilos para los términos y condiciones */
+.campo-terminos {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-terminos label {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para los botones */
+.botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.btn-primary
+{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    
+}
+
+/* Estilos para el select */
+.campo select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px;
+    background: rgba(156, 7, 7, 0.05);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+}
+
+.campo select option {
+    background-color: #333333 !important;
+    color: white !important;
+    padding: 10px;
+}
+
+.campo select::-ms-expand {
+    display: none;
+}
+
+/* Validación visual */
+.campo input:invalid,
+.campo select:invalid,
+.campo textarea:invalid {
+    border-color: white;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .contenedor-registro {
+        padding: 10px;
+    }
+
+    .formulario-registro {
+        padding: 20px;
+    }
+
+    .contenedor-registro h2 {
+        font-size: 2em;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}

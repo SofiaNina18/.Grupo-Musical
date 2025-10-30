@@ -1,0 +1,61 @@
+.apartadoGira {
+    background-color:rgb(56, 49, 54);
+}
+.apartadoGira h2{
+    text-align: center;
+    padding: 20px 0 10px;
+    border-bottom: 1px solid var(--queen-gold);
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: white;
+    text-decoration: underline;
+}
+
+/* ================================================= */
+/* Diseño de Giras (Formato de "Tabla" Sencilla) */
+/* ================================================= */
+
+/* Contenedor principal: Usamos Flexbox para organizar las "filas" de giras */
+.apartadoGira section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo de cada Gira (article) como una "fila" */
+.apartadoGira article {
+    background-color: #1A1A1A; 
+    border: 1px solid var(--queen-red);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    /* Usamos Flex para organizar los contenidos internamente */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si la pantalla es pequeña */
+    justify-content: space-between;
+    color: white;
+}
+
+.apartadoGira article h3 {
+    color: var(--queen-gold);
+    font-size: 1.2em;
+    margin: 0;
+    flex-basis: 100%; /* Ocupa todo el ancho arriba */
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #444;
+}
+
+/* Estilo para los párrafos (datos de la gira) */
+.apartadoGira article p {
+    margin: 3px 10px 3px 0;
+    font-size: 0.95em;
+    /* Le damos un ancho para que se organicen como columnas */
+    flex-basis: auto; 
+}
+
+/* Resaltar las fechas */
+.apartadoGira article p:first-of-type {
+    font-weight: bold;
+    color: var(--queen-red);
+}

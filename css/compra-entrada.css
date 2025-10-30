@@ -1,0 +1,125 @@
+
+.compra-entrada {
+    background-color: rgb(56, 49, 54);
+}
+
+/* El H2 ya no necesita flex-basis: 100%; porque está fuera del flexbox */
+.compra-entrada h2 {
+    text-align: center;
+    padding: 30px;
+    font-size: 40px; 
+    color: white;
+    text-decoration: underline;
+}
+
+/* --- CONTENEDOR PRINCIPAL: Logra la estructura (Imagen | Contenido | Imagen) --- */
+.contenido-principal {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.imagen-izquierda,
+.imagen-derecha 
+{
+    width: 400px; 
+    height: 730px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* Asegurar que la imagen dentro del div ocupe todo su contenedor */
+.imagen-izquierda img,
+.imagen-derecha img {
+    width: 400px;
+    height: 730px;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- ESTILOS DEL CONTENIDO CENTRAL (SECCIÓN DE ENTRADAS) --- */
+.comprar {
+    flex-grow: 1; 
+    max-width: 700px; 
+    padding: 0;
+    margin: 0; 
+}
+
+.comprar article {
+    background-color: #1A1A1A;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.comprar article h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.formulario-entradas {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.formulario-entradas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formulario-entradas li {
+    margin-bottom: 20px;
+}
+
+.formulario-entradas label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.formulario-entradas input,
+.formulario-entradas select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.formulario-entradas select {
+    height: 40px;
+}
+
+.formulario-entradas .botones {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.formulario-entradas button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-entradas button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.formulario-entradas button:hover {
+    opacity: 0.9;
+}

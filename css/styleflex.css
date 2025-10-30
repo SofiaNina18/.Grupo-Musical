@@ -185,9 +185,11 @@ nav
 
 .index .categorianoticias img, .categoriafechasdegira img, .categoriacakepop img {
     width: 380px;
+    height: 380px;
     margin-top: 10px;
     border-radius: 5%;
     transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
     
 }
 

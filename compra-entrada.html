@@ -11,7 +11,7 @@
 </head>
 
 
-<body class ="gira">
+<body class ="compra-entrada">
     <header><!--encabezado-->
         <a href="index.html"> <img src="images/logo.png" id="logo" alt="Logo de la web" /> </a> 
         <div>
@@ -19,24 +19,95 @@
         </div>
     </header>
     
-  <nav> 
-        <ul class ="MenuNivel1">             
+    <nav> 
+        <ul class ="MenuNivel1"> 
             <li>
                 <a href="index.html">Inicio</a>
             </li> 
             <li class = "giras">
                 <a href="gira.html">Gira</a>
                     <ul class = "MenuNivel2">
-                    <li class = "gira"> Gira completa</li>
-                    <li class = " galeria" > Galería </li>
-                    <li>Compra de entradas</li>
+                        <li> <a href = "gira-completa.html">Gira completa</a></li>
+                        <li> <a href = "galeria.html">Galería</a> </li>
+                        <li> <a href = "compra-entrada.html">Compra de entradas</a></li>
                     </ul>
-            </li>        
+            </li> 
             <li><a href = "miembros.html">Miembros</a></li> 
             <li class="activo"><a href = "discografia.html"> Discografía </a></li> 
             <li><a href = "registro.html">Registro</a></li>
         </ul>
-  </nav>
+    </nav>
+    
+    <h2>COMPRA DE ENTRADAS PARA LAS GIRAS DE QUEEN</h2>
+
+    <div class="contenido-principal">
+        
+        <div class ="imagen-izquierda">
+            <img src="images/entrada1.jpg" alt="Gira completa de Queen" class="gira-completa">
+        </div>
+
+        <section class="comprar">
+            <article>
+                <h3>Compra tus entradas aquí</h3>
+                <form class="formulario-entradas">
+                    <ul>
+                        <li>
+                            <label for="nombre">Nombre Completo:</label>
+                            <input type="text" id="nombre" name="nombre" required />
+                        </li>
+
+                        <li>
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required />
+                        </li>
+
+                        <li>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required />
+                        </li>
+
+                        <li>
+                            <label for="gira">Selecciona la Gira:</label>
+                            <select id="gira" name="gira" required>
+                                <option value="">--Selecciona una opción--</option>
+                                <option value="queen-i-tour">Queen I Tour (1973-1974)</option>
+                                <option value="sheer-heart-attack-tour">Sheer Heart Attack Tour (1974-1975)</option>
+                                <option value="a-night-at-the-opera-tour">A Night at the Opera Tour (1975-1976)</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <label for="cantidad">Cantidad de Entradas:</label>
+                            <input type="number" id="cantidad" name="cantidad" min="1" max="10" required />
+                        </li>
+
+                        <li>
+                            <label for="tipo-entrada">Tipo de Entrada:</label>
+                            <select id="tipo-entrada" name="tipo-entrada" required>
+                                <option value="">--Selecciona una opción--</option>
+                                <option value="general">Entrada General</option>
+                                <option value="vip">Entrada VIP</option>
+                                <option value="platinum">Entrada Platinum</option>
+                            </select>
+                        </li>
+
+                        <li class="botones">
+                            <button type="submit">Comprar Entradas</button>
+                        </li>
+                    </ul>
+                </form>
+            </article>
+        </section>
+        
+        <div class ="imagen-derecha">
+            <img src="images/entrada2.jpg" alt="Gira completa de Queen" class="gira-completa">
+        </div>
+        
+    </div>
+  
+
+
+        
 
 </body>
 </html>

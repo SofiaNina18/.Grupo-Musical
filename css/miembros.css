@@ -1,0 +1,110 @@
+/* Estilos para la página de Miembros
+   - Convierte .miembros en una cuadrícula 2x2
+   - Muestra el contenido de .integrante como overlay al hacer hover
+   - Responsivo y con foco accesible
+*/
+h2 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-top: 30px; /* Margen superior */
+    padding-bottom: 30px; /* Espacio debajo del título */
+    text-decoration: underline;
+}
+:root{
+    --gap: 18px;
+}
+body{
+    background-color: rgb(56, 49, 54);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+.miembros{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+    gap: var(--gap);
+    padding: 18px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+}
+
+.miembros article{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 320px; /* ajusta según tus imágenes */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    background: #000; /* por si la imagen tarda en cargar */
+    cursor: pointer;
+}
+
+.miembros article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+/* El bloque que contendrá la biografía (overlay) */
+.miembros .integrante{
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover / focus: mostrar overlay y ampliar imagen */
+.miembros article:hover img,
+.miembros article:focus-within img,
+.miembros article:active img{
+    transform: scale(1.05);
+}
+
+.miembros article:hover .integrante,
+.miembros article:focus-within .integrante,
+.miembros article.show .integrante{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.miembros .integrante h3{
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+.miembros .integrante p{
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Accesibilidad: permitir foco en article si se añade tabindex="0" */
+.miembros article:focus{
+    outline: 3px solid rgba(40,150,200,0.18);
+    outline-offset: 3px;
+}
+
+/* Responsive: una columna en móvil */
+@media (max-width: 700px){
+    .miembros{
+        grid-template-columns: 1fr;
+    }
+    .miembros article{
+        height: 260px;
+    }
+}
+
+/* Sugerencia: para dispositivos táctiles (sin hover) puedes añadir un pequeño script
+   que añada/quite la clase .show al tocar la tarjeta. Si quieres, lo agrego al HTML.
+*/
