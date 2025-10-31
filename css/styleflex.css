@@ -89,7 +89,8 @@ nav
 {
     position: relative; /* Contenedor relativo para posicionar el submenú absoluto */
 }
-.giras:hover, .tienda:hover > .MenuNivel2
+.giras:hover > .MenuNivel2,
+.tienda:hover > .MenuNivel2
 {
     display: block; /* Muestra el submenú cuando se hace hover sobre el item */
 }
@@ -100,16 +101,18 @@ nav
 {
     display: none;         /* Oculto por defecto (se muestra al hover del padre) */
     position: absolute;    /* Posicionado respecto al padre (.giras) */
-    margin-top: 1.5vw;     /* Separación vertical desde el item principal */
-    color: white;          /* Color del texto del submenú */
+    top: 100%;            /* Se posiciona justo debajo del elemento padre */
+    left: 0;              /* Alineado a la izquierda del padre */
+    color: white;         /* Color del texto del submenú */
+    width: 100%;          /* Mismo ancho que el elemento padre */
 }
 .MenuNivel2 > li
 {
-    width: auto;                 /* Ancho automático según contenido */
-    transition: translatex(-20px); /* (Nota: esta propiedad no es válida tal cual; se mantiene tal cual) */
-    border-bottom: solid 1px #FFF; /* Línea separadora entre items */
+    width: 100%;                /* Ocupa todo el ancho del contenedor padre */
+    transition: all 0.2s ease;   /* Transición suave para todos los cambios */
     text-align: center;          /* Centra el contenido dentro del li */
     background-color: #54144b;   /* Fondo del submenú */
+    padding: 5px 0;             /* Espaciado vertical mínimo para legibilidad */
 }
 
 

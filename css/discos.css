@@ -1,0 +1,44 @@
+
+.tabla-discos {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-discos thead {
+    background-color: #54144b;
+    color: #ffffff;
+    text-align: left;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.tabla-discos th,
+.tabla-discos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabla-discos tbody tr {
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.3s ease;
+}
+
+.tabla-discos tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabla-discos tbody tr:last-of-type {
+    border-bottom: 2px solid #54144b;
+}
+
+.tabla-discos tbody tr:hover {
+    background-color: #f5e6f1;
+    color: #54144b;
+}
