@@ -1,22 +1,21 @@
-/* Archivo: gira.css — estilos para la sección de giras */
 .apartadoGira {
     background-color:rgb(56, 49, 54);
 }
 .apartadoGira h2{
     text-align: center;
-    padding: 20px 0 10px; /* espacio arriba y abajo del título */
-    border-bottom: 1px solid var(--queen-gold); /* línea divisoria sutil */
-    margin-bottom: 20px; /* separación respecto al contenido */
+    padding: 20px 0 10px;
+    border-bottom: 1px solid var(--queen-gold);
+    margin-bottom: 20px;
     font-size: 50px;
     color: white;
-    text-decoration: underline; /* acento visual adicional */
+    text-decoration: underline;
 }
 
 
 .apartadoGira section {
     max-width: 900px;
-    margin: 0 auto; /* centra horizontalmente */
-    padding: 20px; /* espacio interior */
+    margin: 0 auto;
+    padding: 20px;
 }
 
 
@@ -26,27 +25,27 @@
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    display: flex; /* organiza los hijos en línea */
-    flex-wrap: wrap; /* permite que los elementos se envuelvan en pantallas pequeñas */
-    justify-content: space-between; /* separa elementos a los extremos cuando cabe */
-    color: white; /* color de texto dentro de cada fila */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
 }
 
 .apartadoGira article h3 {
     color: var(--queen-gold);
     font-size: 1.2em;
     margin: 0;
-    flex-basis: 100%; /* Ocupa todo el ancho en la línea superior */
+    flex-basis: 100%;
     padding-bottom: 5px;
     margin-bottom: 5px;
-    border-bottom: 1px dotted #444; /* separación visual */
+    border-bottom: 1px dotted #444;
 }
 
 
 .apartadoGira article p {
     margin: 3px 10px 3px 0;
     font-size: 0.95em;
-    flex-basis: auto; /* se adapta al contenido y al espacio disponible */
+    flex-basis: auto;
 }
 
 .apartadoGira article p:first-of-type {

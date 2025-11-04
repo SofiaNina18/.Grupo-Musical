@@ -1,9 +1,5 @@
-/* Archivo: gira-completa.css — estilos para la página de la gira completa */
 .gira-completa {
-    /* Fondo que evoca el escenario/oscuridad, pero más suave que el negro puro */
-    background-color: rgb(56, 49, 54);; 
-    /* Agregamos una transición para un efecto sutil al cargar o si se manipula el fondo */
-    transition: background-color 0.8s ease;
+    background-color: rgb(56, 49, 54);
 }
 
 .gira-completa h2 {
@@ -16,31 +12,19 @@
 }
 
 .gira-completa img.gira-completa {
-    /* La clase .gira-completa en la imagen la hace única */
-    display: block; /* Centrar la imagen fácilmente */
-    margin: 0 auto 50px auto; /* Centrar y dar margen inferior */
-    
-    /* Control de tamaño, no estirarla demasiado */
+    display: block;
+    margin: 0 auto 50px auto;
     max-width: 90%; 
     height: auto;
-    
-    /* Estilos visuales de borde y sombra (como un póster enmarcado) */
     border: 5px solid white; 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8); /* Sombra intensa para efecto 3D */
-    
-    /* Transición para efectos visuales */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, opacity 0.4s ease;
-    
-    /* Efecto inicial: la imagen se carga ligeramente opaca y pequeña */
     opacity: 0.9;
     transform: scale(0.98);
 }
 
-/* Efecto al pasar el ratón (¡El foco!) */
 .gira-completa img.gira-completa:hover {
-    /* La imagen se agranda ligeramente y se enfoca */
     transform: scale(1.0); 
     opacity: 1;
-    /* La sombra se hace más pronunciada o cambia de color (efecto "brillo de escenario") */
-    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.9); /* Sombra blanca intensa */
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.9);
 }

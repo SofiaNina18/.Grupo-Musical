@@ -4,121 +4,132 @@
 }
 
 .compra-entrada h2 {
-    text-align: center; /* centra horizontalmente */
-    padding: 30px; /* espacio alrededor del título */
-    font-size: 40px; /* tamaño del título */
-    color: white; /* color del texto del título */
-    text-decoration: underline; /* subrayado para énfasis */
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    color: white;
+    text-decoration: underline;
 }
 
 
 .contenido-principal {
-    display: flex; /* layout en dos (o tres) columnas */
-    align-items: flex-start; /* arranca alineado al tope */
-    justify-content: space-between; /* separa visualmente las columnas */
-    width: 100%; /* ocupa todo el ancho del contenedor padre */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .imagen-izquierda,
 .imagen-derecha {
-    width: 400px; /* ancho fijo para mantener simetría */
-    height: 730px; /* altura fija para estas imágenes */
-    margin: 0; /* sin separación extra */
-    flex-shrink: 0; /* evita que se reduzcan cuando el contenedor sea pequeño */
+    width: 400px;
+    height: 730px;
+    border-radius: 2%;
+    margin: 0;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgb(250, 250, 250);
+    animation: palpito 2.5s infinite alternate;
 }
 
+@keyframes palpito{
+    from {
+        box-shadow: 0 4px 10px rgb(250, 250, 250);
+    }
+    to {
+        box-shadow: 0 8px 40px rgb(255, 0, 0);
+    }
+}
 
 .imagen-izquierda img,
 .imagen-derecha img {
-    width: 400px; /* ajusta la imagen al ancho del contenedor */
-    height: 730px; /* altura fija coherente con la caja */
-    display: block; /* previene espacios inline */
-    object-fit: cover; /* recorta para cubrir sin deformar */
+    width: 400px;
+    height: 730px;
+    display: block;
+    object-fit: cover;
+    border-radius: 2%;
 }
 
 
-/* Área de compra central */
 .comprar {
-    flex-grow: 1; /* crece para ocupar el espacio sobrante */
-    max-width: 700px; /* limita su anchura para legibilidad */
-    padding: 0; /* se delega el padding a elementos internos */
-    margin: 0; /* sin margen externo */
+    flex-grow: 1;
+    max-width: 700px;
+    padding: 0;
+    margin: 0;
 }
 
 .comprar article {
-    background-color: #1A1A1A; /* cuadro oscuro para el panel */
-    padding: 20px; /* espacio interior */
-    border-radius: 8px; /* esquinas suaves */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* sombra sutil */
+    background-color: #1A1A1A;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .comprar article h3 {
-    color: white; /* color del subtítulo */
-    font-size: 24px; /* tamaño del subtítulo */
-    margin-bottom: 20px; /* separación debajo del subtítulo */
-    text-align: center; /* centra el subtítulo */
-    border-bottom: 2px solid #333; /* línea divisoria inferior */
-    padding-bottom: 10px; /* espacio interior inferior */
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
 }
 
 .formulario-entradas {
-    padding: 20px; /* espacio alrededor del formulario */
-    background-color: rgba(255, 255, 255, 0.1); /* panel translúcido */
-    border-radius: 8px; /* esquinas redondeadas */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
 }
 
 .formulario-entradas ul {
-    list-style: none; /* quita viñetas */
-    padding: 0; /* elimina padding por defecto */
-    margin: 0; /* elimina margen por defecto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .formulario-entradas li {
-    margin-bottom: 20px; /* separación entre elementos del formulario */
+    margin-bottom: 20px;
 }
 
 .formulario-entradas label {
-    display: block; /* hace que el label ocupe toda la línea */
-    margin-bottom: 8px; /* separación del campo */
-    color: white; /* color del texto del label */
-    font-weight: bold; /* mayor contraste visual */
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
 }
 
 .formulario-entradas input,
 .formulario-entradas select {
-    width: 100%; /* controles ocupan todo el ancho de su contenedor */
-    padding: 10px; /* espacio interno para escribir */
-    border: 1px solid #ddd; /* borde neutro */
-    border-radius: 4px; /* esquinas suaves */
-    background-color: white; /* fondo claro para legibilidad */
-    font-size: 16px; /* tamaño de texto cómodo */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
 }
 
 .formulario-entradas select {
-    height: 40px; /* altura fija para selects */
+    height: 40px;
 }
 
 .formulario-entradas .botones {
-    display: flex; /* organiza botones en línea */
-    gap: 10px; /* separación entre botones */
-    justify-content: flex-start; /* alineación a la izquierda */
-    margin-top: 30px; /* separación respecto a los campos */
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 30px;
 }
 
 .formulario-entradas button {
-    padding: 12px 24px; /* tamaño visual y área clicable */
-    border: none; /* elimina borde por defecto */
-    border-radius: 4px; /* esquinas redondeadas */
-    font-size: 16px; /* tamaño de texto del botón */
-    cursor: pointer; /* cursor mano para indicar clicable */
-    transition: background-color 0.3s; /* transición suave al hover */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .formulario-entradas button[type="submit"] {
-    background-color: #4CAF50; /* color principal para acción confirmar */
-    color: white; /* texto en blanco para contraste */
+    background-color: #4CAF50;
+    color: white;
 }
 
 .formulario-entradas button:hover {
-    opacity: 0.9; /* ligera reducción de opacidad en hover */
+    opacity: 0.9;
 }

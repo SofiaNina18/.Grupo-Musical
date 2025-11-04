@@ -1,120 +1,78 @@
-/*
-  Archivo: miembros.css
-  Propósito: estilos para la página de "Miembros". Aquí se crea una cuadrícula
-  de tarjetas (2 columnas en escritorio, 1 en móvil) donde cada tarjeta
-  muestra una imagen y un overlay con la biografía de cada integrante.
-*/
-
-
 h2 {
     text-align: center;
     font-size: 50px;
     color: white;
-    margin-top: 30px; /* margen superior para separar del header */
-    padding-bottom: 30px; /* espacio visual debajo del título */
-    text-decoration: underline; /* acento visual */
-}
-
-/* Variables CSS: define un gap reutilizable */
-:root{
-    --gap: 18px; /* separación entre tarjetas */
+    margin-top: 30px;
+    padding-bottom: 30px;
+    text-decoration: underline;
 }
 
 body{
     background-color: rgb(56, 49, 54);
-    margin: 0; /* elimina el espacio por defecto del navegador */
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #222; /* color de texto por defecto fuera de overlays */
+    color: #222;
 }
 
 .miembros{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 por fila en escritorio */
-    gap: var(--gap);
-    padding: 18px; /* padding interior del contenedor */
-    max-width: 1100px; /* evita que las tarjetas se estiren demasiado */
-    margin: 0 auto 40px auto; /* centra y deja margen inferior */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 18px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
 }
 
 .miembros article{
-    position: relative; /* referencia para elementos absolutos internos */
-    overflow: hidden; /* recorta el contenido que salga del contenedor */
-    border-radius: 8px; /* esquinas suaves */
-    height: 320px; /* ajusta según tus imágenes */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* elevación sutil */
-    background: #000; /* fondo mientras carga la imagen */
-    cursor: pointer; /* indica interactividad */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 320px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    background: #000;
+    cursor: pointer;
+    flex: 0 0 calc(50% - 9px);
 }
 
 .miembros article img{
     width: 100%;
     height: 100%;
-    object-fit: cover; /* cubre el contenedor respetando proporción */
-    display: block; /* elimina espacio inline */
-    transition: transform 0.35s ease; /* suaviza la escala al hacer hover */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s;
 }
 
-/* El bloque que contendrá la biografía (overlay) */
 .miembros .integrante{
     position: absolute;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    inset: 0;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
     color: #fff;
-    display: flex; /* facilita centrar con justify/align */
-    flex-direction: column; /* apila título + párrafo verticalmente */
-    justify-content: center; /* centra verticalmente */
-    align-items: center; /* centra horizontalmente */
-    text-align: center; /* texto centrado */
-    padding: 18px; /* espacio interior para el texto */
-    opacity: 0; /* oculto por defecto */
-    transform: translateY(10px); /* leve desplazamiento para animar */
-    transition: opacity 0.25s ease, transform 0.25s ease; /* entrada suave */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s, transform 0.25s;
 }
 
-/* Hover / focus: mostrar overlay y ampliar imagen */
-.miembros article:hover img,
-.miembros article:focus-within img,
-.miembros article:active img{
-    transform: scale(1.05); /* pequeño zoom para efecto dinámico */
+.miembros article:hover img{
+    transform: scale(1.05);
 }
 
-.miembros article:hover .integrante,
-.miembros article:focus-within .integrante,
-.miembros article.show .integrante{
-    opacity: 1; /* mostrar overlay */
-    transform: translateY(0); /* volver a posición natural */
+.miembros article:hover .integrante{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .miembros .integrante h3{
-    margin: 0 0 8px 0; /* margen inferior pequeño */
-    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    font-size: 18px;
 }
+
 .miembros .integrante p{
     margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.4; /* mejora legibilidad en bloques de texto */
+    font-size: 16px;
 }
-
-/* Accesibilidad: permitir foco en article si se añade tabindex="0" */
-.miembros article:focus{
-    outline: 3px solid rgba(40,150,200,0.18); /* indicación visible de foco */
-    outline-offset: 3px;
-}
-
-/* Responsive: una columna en móvil */
-@media (max-width: 700px){
-    .miembros{
-        grid-template-columns: 1fr; /* una columna en móvil */
-    }
-    .miembros article{
-        height: 260px; /* altura reducida para pantallas pequeñas */
-    }
-}
-
-/*
-  Nota sobre dispositivos táctiles:
-  - En dispositivos táctiles no existe hover; una técnica habitual es añadir
-    mediante JavaScript la clase .show al tocar la tarjeta y así forzar la
-    visibilidad del overlay. Si quieres, puedo añadir un pequeño script
-    y el HTML de ejemplo para gestionar este comportamiento.
-*/

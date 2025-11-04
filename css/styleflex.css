@@ -1,25 +1,19 @@
-/* Reseteo básico de estilos */
 *
 {
-    margin: 0;     /* Elimina los márgenes predeterminados del navegador */
-    padding: 0;    /* Elimina el padding por defecto del navegador */
-    box-sizing: border-box;    /* Hace que width/height incluyan padding y border */
-    font-family: Arial, sans-serif;    /* Fuente base para toda la página */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-
-
-/* Encabezado principal */
 header 
 {
-    background-color: #090909; /* Color de fondo del header */
-    display: flex;             /* Activa Flexbox para disponer elementos (logo, título) en línea */
-    align-items: center;       /* Centra los elementos verticalmente dentro del header */
-    justify-content: center;   /* Centra los elementos horizontalmente dentro del header */
-    padding: 20px 60px;        /* Relleno: 20px arriba/abajo, 60px izquierda/derecha */
-    position: relative;        /* Permite posicionar elementos hijos con absolute relativo al header */
+    background-color: #090909;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    position: relative;
 }
-
-
 
 header h1 
 {
@@ -30,9 +24,9 @@ header h1
 }
 header img 
 {
-    width: 100px;   /* Ancho fijo del logo */
-    height: 100px;  /* Alto fijo del logo */
-    margin-top: 10px; /* Ajuste visual del logo respecto al título */
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
 }
 header p {
     background-color: #f988f9;
@@ -43,33 +37,33 @@ header p {
 
 header a {
     position: absolute;
-    left: 60px; /* mismo padding que el header */
+    left: 60px;
 }
-/* Barra de navegación */
+
 nav
 {
-    width: 100%;                 /* Ocupa todo el ancho disponible */
-    display: flex;               /* Activa Flexbox para centrar el menú */
-    align-items: center;         /* Centra verticalmente los elementos del nav */
-    justify-content: center;     /* Centra horizontalmente el contenido del nav */
-    background-color: #3c133c;   /* Color de fondo de la barra de navegación */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c133c;
 }
 
 .MenuNivel1
 {
-    display: flex;       /* Lista principal como fila flexible */
-    align-items: center; /* Centra los items verticalmente */
-    width: 100%;         /* La lista ocupa todo el ancho del nav */
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .MenuNivel1 li
 {
-    list-style: none;  /* Quita el marcador de lista */
-    cursor: pointer;   /* Muestra el cursor pointer al pasar por encima */
-    padding: 5px;      /* Espaciado interno de cada item */
-    flex: 1;           /* Cada item se flexiona y ocupa espacio igual */
-    text-align: center;/* Centra el contenido dentro del item */
-    transition: .3s ease; /* Transición suave para efectos hover */
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+    flex: 1;
+    text-align: center;
+    transition: .3s ease;
 }
 .MenuNivel1 li > a
 {
@@ -80,39 +74,45 @@ nav
 }
 .MenuNivel1 li:hover 
 {
-    display: flex;            /* Mantiene el item como contenedor flexible al hacer hover */
-    flex-direction: column;   /* Si aparecen subelementos, se apilan verticalmente */
-    background-color: rgb(0, 0, 0); /* Fondo al pasar el ratón */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
+
+.MenuNivel1 li.activo,
+.MenuNivel1 li.tienda
+{
+    background-color: #3c133c;
 }
 
 .giras, .tienda
 {
-    position: relative; /* Contenedor relativo para posicionar el submenú absoluto */
+    position: relative;
 }
 .giras:hover > .MenuNivel2,
 .tienda:hover > .MenuNivel2
 {
-    display: block; /* Muestra el submenú cuando se hace hover sobre el item */
+    display: block;
 }
 
 
 
 .MenuNivel2
 {
-    display: none;         /* Oculto por defecto (se muestra al hover del padre) */
-    position: absolute;    /* Posicionado respecto al padre (.giras) */
-    top: 100%;            /* Se posiciona justo debajo del elemento padre */
-    left: 0;              /* Alineado a la izquierda del padre */
-    color: white;         /* Color del texto del submenú */
-    width: 100%;          /* Mismo ancho que el elemento padre */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: white;
+    width: 100%;
 }
 .MenuNivel2 > li
 {
-    width: 100%;                /* Ocupa todo el ancho del contenedor padre */
-    transition: all 0.2s ease;   /* Transición suave para todos los cambios */
-    text-align: center;          /* Centra el contenido dentro del li */
-    background-color: #54144b;   /* Fondo del submenú */
-    padding: 5px 0;             /* Espaciado vertical mínimo para legibilidad */
+    width: 100%;
+    transition: all 0.2s ease;
+    text-align: center;
+    background-color: #54144b;
+    padding: 5px 0;
 }
 
 
@@ -124,9 +124,9 @@ nav
 
 .index section
 {
-    display: flex;         /* Organiza las tarjetas en fila (layout con columnas) */
-    column-gap: 80px;      /* Espacio entre columnas/elementos */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
+    display: flex;
+    column-gap: 80px;
+    justify-content: center;
 }
 
 .index div p
@@ -138,95 +138,92 @@ nav
 
 
 .index div div {
-    display: flex;               /* Contenedor flexible para estructura interna */
-    flex-direction: column;      /* Apila su contenido verticalmente */
-    align-items: center;         /* Centra el contenido horizontalmente */
-    margin-top: 20px;            /* Separación superior */
-    border-top: solid 10px rgb(0, 0, 0); /* Borde superior decorativo */
-    border-right: dottd 1px black; /* (Tal cual en el original) */
-    border-left: dotted 1px black; /* Borde izquierdo */
-    border-bottom: dotted 1px black; /* Borde inferior */
-    border-radius: 10px;         /* Redondeo de esquinas */
-    width: 200px;                /* Ancho fijo del bloque */
-    height: auto;                /* Alto automático según contenido */
-    margin-left: auto;           /* Centra el bloque horizontalmente con auto */
-    margin-right: auto;          /* Centra el bloque horizontalmente con auto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border-top: solid 10px rgb(0, 0, 0);
+    border-right: dottd 1px black;
+    border-left: dotted 1px black;
+    border-bottom: dotted 1px black;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .index div video 
 {
-    border-radius: 5%;            /* Redondea las esquinas del vídeo */
-    margin-top: 10px;            /* Separación superior respecto al elemento anterior */
-    width: 380px;                /* Ancho fijo del vídeo */
-    height: auto;                /* Altura automática para mantener la proporción */
+    border-radius: 5%;
+    margin-top: 10px;
+    width: 380px;
+    height: auto;
 }
 
 .index h2 {
-    text-align: center;          /* Centra el título horizontalmente */
-    font-size: 50px;            /* Tamaño grande para títulos principales */
-    color: white;               /* Color del texto */
-    margin-top: 30px;           /* Margen superior para separar del contenido previo */
-    padding-bottom: 30px;       /* Espacio inferior para separar del siguiente bloque */
-    text-decoration: underline; /* Subraya el título */
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    text-decoration: underline;
 }
 
 
 .index .categorianoticias > div, .categoriafechasdegira > div, .categoriacakepop > div 
 {
-    background-color: white;                      /* Fondo blanco para las tarjetas */
-    width: 400px;                                 /* Ancho fijo de cada tarjeta */
-    text-align: center;                           /* Centra el contenido dentro de la tarjeta */
-    border-radius: 5%;                            /* Esquinas redondeadas */
-    padding-bottom: 20px;                         /* Espacio inferior dentro de la tarjeta */
-    transition: transform 0.3s ease-in-out,       /* Transición suave para transform y sombra */
+    background-color: white;
+    width: 400px;
+    text-align: center;
+    border-radius: 5%;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease-in-out,
                 box-shadow 0.3s ease-in-out;
 }
 
 .index .categorianoticias > div:hover, .categoriafechasdegira > div:hover, .categoriacakepop > div:hover {
-    transform: scale(1.05);                       /* Aumenta ligeramente la tarjeta al pasar el ratón */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);   /* Añade sombra para efecto de profundidad */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 
 .index .categorianoticias img, .categoriafechasdegira img, .categoriacakepop img {
-    width: 380px;                                  /* Ancho de la imagen dentro de la tarjeta */
-    height: 380px;                                 /* Alto fijo para mantener cuadrado */
-    margin-top: 10px;                              /* Separación superior de la imagen */
-    border-radius: 5%;                             /* Esquinas redondeadas en la imagen */
-    transition: transform 0.3s ease-in-out;        /* Transición suave para el efecto hover */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    width: 380px;
+    height: 380px;
+    margin-top: 10px;
+    border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
 }
 
 .index .categorianoticias > div:hover img, .categoriafechasdegira > div:hover img, .categoriacakepop > div:hover img {
-    transform: scale(1.02);                        /* Pequeño zoom en la imagen al hacer hover */
+    transform: scale(1.02);
 }
 
-
-
-/* Estilo para asegurar que el contenido no se superponga con el footer */
 body {
-    min-height: 100vh;       /* Asegura que el body ocupe como mínimo el alto de la ventana */
-    display: flex;           /* Activa Flexbox en el body para estructurar la página verticalmente */
-    flex-direction: column;  /* Apila el contenido verticalmente (header, main, footer) */
-    margin: 0;               /* Elimina márgenes por defecto */
-    padding-bottom: 95px;    /* Espacio extra inferior para dejar hueco al footer fijo */
-    box-sizing: border-box;  /* Incluye padding y border en cálculos de ancho/alto */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 95px;
+    box-sizing: border-box;
 }
 
 footer {
-    background-color: #000000; /* Fondo negro para el footer */
-    width: 100%;                /* Ocupa todo el ancho */
-    position: fixed;            /* Fijo respecto a la ventana */
-    bottom: 0;                  /* Alineado a la parte inferior */
-    left: 0;                    /* Alineado al borde izquierdo */
-    display: flex;              /* Activa Flexbox para distribuir enlaces */
-    flex-direction: row;        /* Elementos en fila */
-    height: 75px;               /* Altura fija del footer */
-    justify-content: space-between; /* Espacio entre los enlaces */
-    padding-left: 10%;          /* Relleno izquierdo relativo */
-    padding-right: 10%;         /* Relleno derecho relativo */
-    box-sizing: border-box;     /* Incluye padding en los cálculos de caja */
-    z-index: 1000; /* Asegura que el footer esté siempre por encima */
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 footer > a {
@@ -234,71 +231,4 @@ footer > a {
     text-decoration: none;
     color: white;
     align-self: center;
-}
-
-@media (max-width: 1250px) {
-    /* Ajusta el espaciado y el tamaño del contenido general */
-    section {
-        column-gap: 30px; /* Reduce el espacio entre las tarjetas */
-    }
-
-    .categorianoticias > div, .categoriafechasdegira > div, .categoriacakepop > div {
-        width: 300px; /* Reduce el ancho de las tarjetas de contenido */
-    }
-
-    .categorianoticias img, .categoriafechasdegira img, .categoriacakepop img {
-        width: 280px; /* Reduce el ancho de las imágenes dentro de las tarjetas */
-    }
-}
-@media (max-width: 768px) {
-    /* 1. Menú de Navegación */
-    /* Lo esencial es reducir el tamaño del texto y el padding para que quepa */
-    .MenuNivel1 li > a {
-        font-size: 0.85em; /* Reduce el tamaño de la fuente del menú */
-    }
-    
-    .MenuNivel1 li {
-        padding: 5px 0; /* Ajusta el relleno vertical para que no se vea tan apretado */
-    }
-
-    /* 2. Encabezado */
-    header {
-        flex-direction: column; /* Apila el logo y el título */
-        padding: 20px;
-    }
-    
-    header h1 {
-        font-size: 50px; /* Reduce el tamaño del título "Queen" */
-        text-align: center;
-    }
-
-    header a {
-        position: static; /* Quita el posicionamiento absoluto del logo */
-        margin-bottom: 10px;
-    }
-
-    /* 3. Contenedores de Noticias/Giras/Merchandising */
-    /* Este es el cambio más importante para que no se corten los lados */
-    section {
-        flex-direction: column; /* Apila las tarjetas verticalmente */
-        align-items: center; /* Centra las tarjetas apiladas */
-        gap: 30px; /* Añade un espacio entre las tarjetas apiladas */
-    }
-
-    .categorianoticias > div, .categoriafechasdegira > div, .categoriacakepop > div {
-        width: 90%; /* Hace que las tarjetas ocupen un 90% del ancho de la pantalla */
-        max-width: 400px; /* Mantiene un límite de ancho para pantallas más grandes */
-    }
-
-    .categorianoticias img, .categoriafechasdegira img, .categoriacakepop img {
-        width: 95%; /* Las imágenes ocupan casi todo el ancho de su tarjeta */
-    }
-    
-    /* 4. Títulos de Sección */
-    h2 {
-        font-size: 35px; /* Reduce el tamaño de los títulos (Ultimas Noticias, etc.) */
-    }
-    
-    /* 5. Pie de Página (Footer) */
-
 }
