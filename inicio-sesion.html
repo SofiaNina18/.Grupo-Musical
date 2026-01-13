@@ -7,10 +7,10 @@
     <meta name="description" content="página de un grupo musical" />
     <meta name="keywords" content="Queen, Freddie Mercury, Brian May, Roger Taylor, John Deacon" />
     <link rel="stylesheet" href="css/styleflex.css" />
-    <link rel="stylesheet" href="css/tienda.css" />
+    <link rel="stylesheet" href="css/inicio-sesion.css" />
 </head>
 
-<body class ="tienda">
+<body class ="inicio-sesion">
     <header><!--encabezado-->
         <a href="index.html"> <img src="images/logo.png" id="logo" alt="Logo de la web" /> </a> 
         <div>
@@ -45,43 +45,22 @@
         </ul>
     </nav>
 
-    <h2>TIENDA OFICIAL DE QUEEN</h2>
-    <section class="discos">
-        <div class="producto">
-            <img src="images/disco1.png" alt="Disco de Bohemian Rhapsody">
-            <h3>Bohemian Rhapsody 50th Anniversary 12” Picture Disc</h3>
-            <p>Precio: 35€</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto">
-            <img src="images/disco2.png" alt="Disco A Night At The Opera">
-            <h3>A Night At The Opera 50th Anniversary Edition</h3>
-            <p>Precio: 30€</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto">  
-            <img src="images/disco3.png" alt="Disco Bohemian Rhapsody">
-            <h3>Bohemian Rhapsody 50th Anniversary 7” Single</h3>
-            <p>Precio: 16€</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto">
-            <img src="images/disco4.png" alt="Disco Bohemian Rhapsody">
-            <h3>Bohemian Rhapsody 50th Anniversary 12” Single</h3>
-            <p>Precio: 16€</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto">
-            <img src="images/disco5.png" alt="Disco A Night At The Opera">
-            <h3>A Night At The Opera 50th Anniversary Album & T-Shirt Bundle</h3>
-            <p>Precio: 65€</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto">
-            <img src="images/disco6.png" alt="Disco Greatest Hits">
-            <h3>Disco Greatest Hits</h3>
-            <p>Precio: 15€</p>
-            <button>Comprar</button>
-        </div>
-        
-    </section>
+    <h2>INICIO DE SESIÓN</h2>
+    <div class="formulario-inicio-sesion">
+        <form action="#" method="post">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+    <footer>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Condiciones legales</a>
+        <a href="#">Contacto</a>
+    </footer>
+</body>
+</html>

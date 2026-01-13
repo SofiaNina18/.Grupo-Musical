@@ -1,0 +1,47 @@
+h2 {
+    text-align: center;
+    padding: 30px 0 20px;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+.formulario-inicio-sesion {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #641961;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+.formulario-inicio-sesion label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.formulario-inicio-sesion input[type="text"],
+.formulario-inicio-sesion input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.formulario-inicio-sesion input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3c133c;
+    color: rgb(231, 24, 24);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.formulario-inicio-sesion input[type="submit"]:hover {
+    background-color: #000000;
+}
+
+.formulario-inicio-sesion input[type="submit"]:active {
+    background-color: #ff00ff;
+}
