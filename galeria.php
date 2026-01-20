@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen</title>
+    <meta name="description" content="página de un grupo musical" />
+    <meta name="keywords" content="Queen, Freddie Mercury, Brian May, Roger Taylor, John Deacon" />
+    <link rel="stylesheet" href="css/styleflex.css" />
+    <link rel="stylesheet" href="css/galeria.css" /> <!--comentar-->
+</head>
+
+
+<body class ="galeria">
+    <header><!--encabezado-->
+        <a href="index.html"> <img src="images/logo.png" id="logo" alt="Logo de la web" /> </a> 
+        <div>
+            <h1>Queen</h1> 
+        </div>
+    </header>
+    
+    <nav> 
+        <ul class ="MenuNivel1"> 
+            <li>
+                <a href="index.html">Inicio</a>
+            </li> 
+            <li class = "giras">
+                <a href="gira.html">Gira</a>
+                    <ul class = "MenuNivel2">
+                        <li> <a href = "gira-completa.html">Gira completa</a></li>
+                        <li> <a href = "galeria.html">Galería</a> </li>
+                        <li> <a href = "compra-entrada.html">Compra de entradas</a></li>
+                    </ul>
+            </li> 
+            <li><a href = "miembros.html">Miembros</a></li> 
+            <li class="activo"><a href = "discografia.html"> Discografía </a></li> 
+            <li><a href = "registro.html">Registro</a></li>
+            <li class ="tienda">
+                <a href="tienda.html">Tienda</a>
+                    <ul class ="MenuNivel2">
+                        <li> <a href = "merchandising.html">Merchandising</a></li>
+                        <li> <a href = "discos.html">Discos</a> </li>
+                    </ul>
+            </li>
+            <li><a href = "inicio-sesion.html">Inicio de sesión</a></li>
+        </ul>
+    </nav>
+    
+    <h2>GALERÍA DE GIRAS DE QUEEN</h2>
+
+    <div class="contenido">
+        <div class ="imagen-galeria">
+            <img src="images/imagen2.jpg" alt="Queen en concierto 1">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen1.jpg" alt="Queen en concierto 2">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen3.jpg" alt="Queen en concierto 3">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen4.jpg" alt="Queen en concierto 4">
+        </div>  
+        <div class ="imagen-galeria">
+            <img src="images/imagen5.jpg" alt="Queen en concierto 5">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen6.jpg" alt="Queen en concierto 6">
+        </div>  
+        <div class ="imagen-galeria">
+            <img src="images/imagen7.jpg" alt="Queen en concierto 7">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen8.jpg" alt="Queen en concierto 8">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen9.jpg" alt="Queen en concierto 9">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen10.jpg" alt="Queen en concierto 10">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen11.jpg" alt="Queen en concierto 11">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen12.jpg" alt="Queen en concierto 12">
+        </div>
+        <div class ="imagen-galeria">
+            <img src="images/imagen13.jpg" alt="Queen en concierto 13">
+        </div> 
+        <div class ="imagen-galeria">
+            <img src="images/imagen14.jpg" alt="Queen en concierto 14">
+        </div>
+
+    <footer>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Condiciones legales</a>
+        <a href="#">Contacto</a>
+    </footer>
+</body>
+</html>
